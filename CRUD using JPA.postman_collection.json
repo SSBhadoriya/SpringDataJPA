@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "5d6cd7d4-57ee-42dd-a4bb-7981243e07d7",
+		"name": "CRUD using JPA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15148058"
+	},
+	"item": [
+		{
+			"name": "Create/Save new Record",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    // id=101, //Auto-generated and auto-incremented\r\n    \"title\":\"Learn Code with Durgesh\",\r\n    \"content\":\"JdbcTemplate & JPA\",\r\n    \"status\":\"In progress\",\r\n    \"dateTime\": \"2024-12-22\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/todojpa/save",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"todojpa",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all users record",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/todojpa/getAll",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"todojpa",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get id specific data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/todojpa/getUser/152",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"todojpa",
+						"getUser",
+						"152"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update id specific data",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    // \"id\": 152,\r\n    \"title\": \"Learn Code with Durgesh is WOW & Amazing\",\r\n    \"content\": \"JdbcTemplate & JPA & Kubernate\",\r\n    \"status\": \"Completed\",\r\n    \"dateTime\": \"2024-12-22T00:00:00.000+00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/todojpa/updateUser/152",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"todojpa",
+						"updateUser",
+						"152"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete id specific data",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/todojpa/updateUser/152",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"todojpa",
+						"updateUser",
+						"152"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
